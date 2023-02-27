@@ -31,15 +31,11 @@ export const ListaProductos = () => {
       <ul>
         {productos.map((element) => {
           return (
-            <ul>
-              <li className={styles.listStyle} key={element.precio}>
-                <h1 className={styles.nameProduct}>
-                  Producto: {element.nombre}
-                </h1>
-                <img src={element.image} alt="" />
-                <h2>Precio: {element.precio}</h2>
-              </li>
-            </ul>
+            <li className={styles.listStyle} key={element.precio}>
+              <h1 className={styles.nameProduct}>Producto: {element.nombre}</h1>
+              <img src={element.image} alt="" />
+              <h2>Precio: {element.precio}</h2>
+            </li>
           );
         })}
       </ul>
