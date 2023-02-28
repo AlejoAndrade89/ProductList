@@ -25,13 +25,13 @@ const productos = [
 
 import React from "react";
 
-export const ListaProductos = () => {
+export const ListaProductos = ({ isDark }) => {
   return (
-    <div>
+    <div className={isDark ? styles.dark : styles.light}>
       <ul>
         {productos.map((element) => {
           return (
-            <li className={styles.listStyle} key={element.precio}>
+            <li key={element.precio}>
               <h1 className={styles.nameProduct}>Producto: {element.nombre}</h1>
               <img src={element.image} alt="" />
               <h2>Precio: {element.precio}</h2>
